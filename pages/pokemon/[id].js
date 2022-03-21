@@ -52,12 +52,12 @@ export default function Details() {
   if (!pokemon) return null;
 
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>{pokemon.name}</title>
       </Head>
       <div>
-        <Link href="/">
+        <Link href="/pokemon">
           <a>Back to Home</a>
         </Link>
       </div>
