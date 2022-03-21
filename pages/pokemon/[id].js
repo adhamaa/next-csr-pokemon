@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Details.module.css";
 import { useRouter } from "next/router";
+import { Spinner } from "../../components/Spinner";
 
 // export async function getStaticPaths() {
 //   const resp = await fetch(
@@ -49,7 +50,7 @@ export default function Details() {
     if (id) getPokemon();
   }, [id]);
 
-  if (!pokemon) return null;
+  if (!pokemon) return <Spinner />;
 
   return (
     <div className={styles.container}>

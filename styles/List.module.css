@@ -7,7 +7,7 @@
 }
 .grid {
   display: grid;
-  place-items: center;
+  /* place-items: center; */
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin: 2rem 0;

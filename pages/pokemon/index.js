@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/List.module.css";
+import { Spinner } from "../../components/Spinner";
 
 // export async function getStaticProps() {
 //   const resp = await fetch(
@@ -29,7 +30,7 @@ export default function Home() {
     getPokemon();
   }, []);
 
-  if (!pokemon) return null;
+  if (!pokemon) return <Spinner />;
 
   return (
     <div className={styles.container}>
